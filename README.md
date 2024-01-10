@@ -15,3 +15,4 @@
 - The user cannot decide when the loan period starts
 - The user cannot specify the value of amortization - for instance if the interest rate is a procentage and the loan is repaid with a specific value each month
 - The error messages are not very professional
+- The application is not fully respnonsive - not suitable for mobile use
