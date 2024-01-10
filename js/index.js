@@ -28,12 +28,12 @@ calculateBtn.addEventListener('click', () => {
     let totalPayment = 0;
     let monthlyPayment = 0;
     //testar att lånevilkoren är 'rimliga'
-    if (interestRate >= 10 && loanPeriod >= 50) {
+    if (interestRate > 10 && loanPeriod >= 50) {
         payPlan.innerHTML = `
         An interest rate of ${interestRate}% with a loan period of ${loanPeriod} years is completely unreasonable!! <br> 
         Renegotiate with a bank that won't scam you!`;
     }
-    else if (interestRate >= 10) {
+    else if (interestRate > 10) {
         payPlan.innerHTML = `
         An interest rate of ${interestRate}% is bonkers!! <br>
         You are getting ripped off!!!`;
