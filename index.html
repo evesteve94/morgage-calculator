@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+    <title>Bolåneskalkyl</title>
+</head>
+<body>
+    <h1>Calculate Your Morgage</h1><br>
+    <img src="./images/roof.png" alt="">
+    <div class="calculator-container">
+        <label for="loan-amount">Loan Amount (SEK): </label>
+            <input type="number" name="" id="loan-amount" placeholder="ex. 1000000">
+        <label for="interest-rate">Interest Rate (%): </label>
+            <input type="number" id="interest-rate" name="decimalNumber" step="0.01" pattern="\d+(\.\d{1,2})?" title="Enter a number with up to two decimal places" placeholder="ex. 4.2">
+        <label for="loan-period">Loan Period (years): </label>
+            <input type="number" id="loan-period" placeholder="ex. 25">
+        <button id="calculate">Calculate</button>
+    </div>
+    <p id="total-results"></p>
+    <h2 id="pay-plan">Payment Plan</h2>
+    <div class="results-container" id="results-container">
+        <div class="results" id="months-div">
+            <h3>Date</h3>
+        </div>
+        <div class="results" id="monthly-payment-div">
+            <h3>Payment</h3>
+        </div>
+        <div class="results" id="monthly-interest-div">
+            <h3>Monthly Interest</h3>
+        </div>
+        <div class="results" id="remaining-amount-div">
+            <h3>Remaining Amount</h3>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
