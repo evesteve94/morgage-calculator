@@ -61,9 +61,9 @@ calculateBtn.addEventListener('click', () => {
     
             //uppdaterar varje kolumn med data
             monthsDiv.innerHTML += `${futureDate.toLocaleDateString()}<br>`;
-            monthlyPaymentsDiv.innerHTML += `${monthlyPayment.toFixed(2)} SEK<br>`
-            monthlyInterestDiv.innerHTML += `${monthlyInterestAmount.toFixed(2)} SEK<br>`
-            remainingAmountDiv.innerHTML += `${loanAmountValue.toFixed(2)} SEK<br>`
+            monthlyPaymentsDiv.innerHTML += `${monthlyPayment.toLocaleString('en-US', { maximumFractionDigits: 2 }) } SEK<br>`
+            monthlyInterestDiv.innerHTML += `${monthlyInterestAmount.toLocaleString('en-US', { maximumFractionDigits: 2 }) } SEK<br>`
+            remainingAmountDiv.innerHTML += `${loanAmountValue.toLocaleString('en-US', { maximumFractionDigits: 2 }) } SEK<br>`
 
             numberOfMonths--; //antal månader subtraheras
     
@@ -75,10 +75,10 @@ calculateBtn.addEventListener('click', () => {
         totalPayment= totalInterest + totalLoan;
 
         totalResults.innerHTML +=`
-        Total Loan: ${totalLoan.toFixed(2)} SEK <br>
-        Monthly Payment: ${monthlyPayment.toFixed(2)} SEK<br>
-        Total Interest: ${totalInterest.toFixed(2)} SEK<br> 
-        Total Payment: ${totalPayment.toFixed(2)} SEK`;
+        Total Loan: ${totalLoan.toLocaleString('en-US', { minimumFractionDigits: 2 }) } SEK <br>
+        Monthly Payment: ${monthlyPayment.toLocaleString('en-US', { maximumFractionDigits: 2 }) } SEK<br>
+        Total Interest: ${totalInterest.toLocaleString('en-US', { maximumFractionDigits: 2 }) } SEK<br> 
+        Total Payment: ${totalPayment.toLocaleString('en-US', { maximumFractionDigits: 2 }) } SEK`;
     }
     //töm inputs
     loanAmountInput.value = '';
